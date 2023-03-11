@@ -29,7 +29,7 @@ def pan_read_data(text):
     text0 = text1[lineno+1:]
     try:
     # Cleaning first names
-            name = text0[0]
+            name = text0[3]
             name = name.rstrip()
             name = name.lstrip()
             name = name.replace("8", "B")
@@ -38,7 +38,7 @@ def pan_read_data(text):
             name = name.replace("1", "I")
             name = re.sub('[^a-zA-Z] +', ' ', name)
     # Cleaning Father's name
-            fname = text0[1]
+            fname = text0[5]
             fname = fname.rstrip()
             fname = fname.lstrip()
             fname = fname.replace("8", "S")
@@ -48,7 +48,7 @@ def pan_read_data(text):
             fname = fname.replace("\"", "A")
             fname = re.sub('[^a-zA-Z] +', ' ', fname)
     # Cleaning DOB
-            dob = text0[2][:10]
+            dob = text0[11][:10]
             dob = dob.rstrip()
             dob = dob.lstrip()
             dob = dob.replace('l', '/')

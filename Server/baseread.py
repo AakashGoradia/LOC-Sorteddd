@@ -8,7 +8,6 @@ import os
 from PIL import Image
 import ftfy
 import pan_read           
-'''module which we made to read the text of the document'''
 import aadhaar_read
 import io
 
@@ -24,7 +23,8 @@ if var < 30:
     exit(1)
 
 filename = "image.jpg"
-text = pytesseract.image_to_string(Image.open(filename), lang = 'eng')
+text = pytesseract.image_to_string(Image.open(filename))
+print(text)
 
 text_output = open('output.txt', 'w', encoding='utf-8')
 text_output.write(text)
@@ -36,7 +36,7 @@ text = file.read()
 text = ftfy.fix_text(text)
 text = ftfy.fix_encoding(text)
 
-if "income" in text.lower() or "tax" in text.lower() or "department" in text.lower():
+if "income" in text.lower() or  "tax" in text.lower() or "permanent" in text.lower() or "department" in text.lower():
     data = pan_read.pan_read_data(text)
 elif "male" in text.lower():
     data = aadhaar_read.adhaar_read_data(text)
