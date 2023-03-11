@@ -4,7 +4,7 @@ import Landing from './pages/Landing';
 const App=()=> {
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Landing/>
     </>
   );
