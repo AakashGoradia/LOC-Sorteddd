@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Navbar from './components/Navbar';
+import Landing from './pages/Landing';
+const App=()=> {
   return (
-    <div className="App">
-      <p className='text-3xl font-bold'>Hi</p>
-    </div>
+    <>
+      <Navbar/>
+      <Landing/>
+    </>
   );
 }
 
