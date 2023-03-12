@@ -17,17 +17,23 @@ const App=()=> {
     <>
       {/* <Navbar/> */}
       {/* <Landing/> */}
-      {/* <FaceCapture/> */}
-      <Routes>
+      <FaceCapture/>
+      {/* <Routes>
         <Route path='/face' element={<FaceCapture/>}/>
-        <Route path='/' element={<Landing/>}/>
+        <Route path='/' element={<DashBoard/>}/>
+
         <Route path='/id' element={<IDupload/>}/>
-      </Routes>
+      </Routes> */}
+        {/* <Route path='/' element={<Landing/>}/> */}
 
       {/* <OtpVerify /> */}
       {/* <Signup setAadhars={setAadhars} /> */}
       {/* <Otp aadhars = {aadhars} /> */}
       {/* <DashBoard /> */}
+      {/* <Route ></Route>
+      <Layout>
+        <Dashboard/>
+      </Layout> */}
 
     </>
   );

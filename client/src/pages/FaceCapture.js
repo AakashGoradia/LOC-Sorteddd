@@ -106,6 +106,17 @@ const FaceCapture = () => {
     const imageURL = URL.createObjectURL(dataURItoBlob(picture));
     navigate('/id');
     console.log(imageURL)
+    fetch('/upload', {
+      method: 'POST',
+      body: picture
+    })
+    .then(response => response.json())
+    .then((response) => {
+      // handle response from Flask
+      var res = response.data
+      console.log(res)
+    })
+    .catch(error => console.error(error));
 
   };
 
@@ -162,6 +173,13 @@ const FaceCapture = () => {
             Capture
           </button>
         )}
+        {/* <div>
+          {res ? (
+            <div className='text-3xl font-lato font-bold'>
+              Congratulations, You are verified
+            </div>
+          ):"Not Verified"}
+        </div> */}
       </div>
     </div>
   );
