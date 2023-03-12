@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
@@ -10,6 +10,8 @@ import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
 import NavbarAfter from './components/NavbarAfter';
+import Landing from './pages/Landing';
+import UploadDocs from './pages/UploadDocs/UploadDocs';
 
 const DashBoard = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -25,7 +27,7 @@ const DashBoard = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent
@@ -64,10 +66,11 @@ const DashBoard = () => {
             </div>
             <div>
               {themeSettings && (<ThemeSettings />)}
-
+              
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
+                {/* <Route path="/dashboard" element={(<Ecommerce />)} />
+                <Route path="/uploadDocs" element={(<UploadDocs />)} /> */}
                 {/* <Route path="/ecommerce" element={(<Ecommerce />)} /> */}
 
                 {/* pages  */}
@@ -96,7 +99,7 @@ const DashBoard = () => {
             <Footer />
           </div>
         </div>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 };

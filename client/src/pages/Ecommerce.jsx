@@ -3,10 +3,11 @@ import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
-import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
+import {  Button } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../assets/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../assets/product9.jpg';
+import NavbarAfter from '../components/NavbarAfter';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -95,7 +96,7 @@ const Ecommerce = () => {
               </div>
             ))}
             <div className="mt-4">
-              <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
+              {/* <SparkLine currentColor={currentColor} id="area-sparkLine" height="160px" type="Area" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" /> */}
             </div>
           </div>
 
