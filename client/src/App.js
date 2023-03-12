@@ -5,17 +5,19 @@ import OtpVerify from './pages/OtpVerify';
 import Signup from './pages/Signup/Signup';
 import Otp from './pages/Otp';
 import React, { useState } from "react";
+import DashBoard from './DashBoard';
 
 const App=()=> {
   
   const [aadhars,setAadhars] = useState("");
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
       {/* <Landing/> */}
       {/* <OtpVerify /> */}
-      <Signup setAadhars={setAadhars} />
+      {/* <Signup setAadhars={setAadhars} /> */}
       {/* <Otp aadhars = {aadhars} /> */}
+      <DashBoard />
     </>
   );
 }
