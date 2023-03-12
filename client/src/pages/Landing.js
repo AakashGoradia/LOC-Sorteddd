@@ -1,7 +1,10 @@
 import React from 'react'
 import ImageCarousel from '../components/ImageCarousel'
+import {useNavigate} from "react-router-dom"
 
 const Landing=()=> {
+  const navigate = useNavigate();
+
   return (
     <div>
       {/* <header class="text-gray-700 body-font border-b border-gray-200">
@@ -35,7 +38,9 @@ const Landing=()=> {
       <p class="mb-8 leading-relaxed font-medium font-lato text-white">Forget the hassle of carrying your important documents everywhere. We have made verification and other services online for you. Sign Up Now and get started.</p>
       <div class="flex justify-center">
         <button class="inline-flex text-black bg-white py-2 px-6 focus:outline-none hover:bg-gray-400 rounded text-lg border-black border-2 font-semibold font-lato">Sign Up/Log In</button>
-        <button class="border-black border-2 font-medium ml-4 inline-flex text-white font-lato bg-black py-2 px-6 focus:outline-none underline rounded text-lg">Go to Dashboard</button>
+        <button class="border-black border-2 font-medium ml-4 inline-flex text-white font-lato bg-black py-2 px-6 focus:outline-none underline rounded text-lg " onClick={(e) => {
+              navigate("/face")
+            }}>Go to Dashboard</button>
       </div>
     </div>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 lg:mr-8">
